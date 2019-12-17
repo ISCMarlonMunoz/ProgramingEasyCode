@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "POO - Encapsulamiento";
+}
+<style>
+     body {
+    margin-top: 50px;
+}
+   .contenedor {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+   .divuno {
+    background: linear-gradient(-160deg, black, rgb(2,75,110));
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 150px;
+    padding-bottom: 10px;
+}
+
+   .divdos {
+    background: orange;
+    position: relative;
+    height: 180px;
+    width: 97%;
+}
+
+.divtres {
+    background: linear-gradient(-160deg, rgb(48,151,168), rgb(1,10,147) );
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 150px;
+}
+
+.codigo{
+    color:black;
+}
+
+</style>
+
+    <div class="contenedor">
+
+        <div class="divuno">
+            <div class="texto">
+                <h4 class="principal">ENCAPSULAMIENTO</h4>
+                <p>En ocasiones las clases con atributos y metodos que se emplean solo en la ejecucion de procesos internos, por lo que no necesitan ser accedidas desde el programa principal u otra clase.  </p>
+                <p>
+                    La informacion de un objeto se encapsula mediante palabras reservadas conocidas como modificadores de acceso, que restringen la informacion en tres niveles: publica, protegida y privada.
+                </p>
+
+                <ul>
+                    <li>Publico (Public): Todos pueden acceder a los datos o métodos de una clase que se define con este nivel.</li>
+                    <li>Protegido (Protected): No son de acceso público y solamente son accesibles dentro de su clase y por sus subclases.</li>
+                    <li>Privado (Private): En este nivel solo pueden acceder a métodos o atributos solo si están en la misma clase.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="divdos">
+            <div class="texto2">
+                <table>
+
+                    <tr>
+                        <td><img class="imagen" src="~/images/Conceptos/encapsulamiento.png" alt="" width="145"></td>
+
+
+                        <td>
+                            <h4>ESTRUCTURA DEL CODIGO</h4>
+                            <textarea class="codigo" name="textarea" rows="7" cols="73">
+                            Un modelo utilizado desde hace tiempo es simplemente utilizar propiedades con nombres que empiezan por _. 
+                            
+                            Propiedades que empiezan por _
+
+"use strict";
+ 
+class Fibonacci {
+    constructor(n) {
+        this._values = [0,1];
+        for(var i = 1; i &lt; n - 1; i++) {
+            this._values.push(this._values[i] + this._values[i - 1]);
+        }
+    }
+    * [Symbol.iterator]() {
+        for (let arg of this._values) {
+            yield arg;
+        }
+    }
+            
+</textarea>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="divtres">
+            <div class="texto3">
+                <h4>DATO IMPORTANTE</h4>
+                <ul>
+                    <li>
+                        El encapsulamiento de los atributos y metodos consiste en diferenciarlos de aquellos que interecturan directamente con el programa principal y otros objetos.
+                    </li>
+
+                    <li>Se denomina encapsulamiento al ocultamiento del estado, es decir de los datos miembro de un objeto de manera que solo se pueda cambiar mediante las operaciones definidas para ese objeto.</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>

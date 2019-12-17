@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Javascript - While";
+}
+<style>
+     body {
+    margin-top: 50px;
+}
+   .contenedor {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+   .divuno {
+    background: linear-gradient(-160deg, black, rgb(2,75,110));
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 150px;
+    padding-bottom: 10px;
+}
+
+   .divdos {
+    background: orange;
+    position: relative;
+    height: 180px;
+    width: 97%;
+}
+
+.divtres {
+    background: linear-gradient(-160deg, rgb(48,151,168), rgb(1,10,147) );
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 150px;
+}
+
+.codigo{
+    color:black;
+}
+
+</style>
+
+    <div class="contenedor">
+
+        <div class="divuno">
+            <div class="texto">
+                <h4 class="principal">WHILE</h4>
+                <p>
+                    Un ciclo es cualquier construcción de programa que repite una sentencia o secuencia de sentencias un número de veces. Aquí se ejecuta el o (las) sentencia (s) mientras la condición es verdadera; al momento de ser falsa termina el ciclo.
+                </p>
+            </div>
+        </div>
+
+        <div class="divdos">
+            <div class="texto2">
+                <table>
+
+                    <tr>
+                        <td><img class="imagen" src="~/images/Conceptos/while.jpg" alt="" width="145"></td>
+
+
+                        <td>
+                            <h4>ESTRUCTURA DEL CODIGO</h4>
+                            <textarea class="codigo" name="textarea" rows="7" cols="73">
+              while (condicion)
+                sentencia
+                
+                EJEMPLO
+                El siguiente bucle while itera mientras "n" es menor que tres.
+
+                 n = 0;
+                 x = 0;
+                 while (n < 3) {
+                 n ++;
+                 x += n;
+                }
+            </textarea>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="divtres">
+            <div class="texto3">
+                <h4>DATO IMPORTANTE</h4>
+                <ul>
+                    <li>
+                        Cada interación, el bucle incrementa n y la añade a x.
+
+                        Después del primer pase: n = 1 y x = 1
+                        Después del segundo pase: n = 2 y x = 3
+                        Después del tercer pase: n = 3 y x = 6
+                        Después de completar el tercer pase, la condición n < 3 no será verdadera más tiempo, por lo que el bucle terminará.
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>

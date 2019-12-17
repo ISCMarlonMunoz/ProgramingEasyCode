@@ -1,0 +1,132 @@
+﻿@{
+    ViewData["Title"] = "Practicas";
+}
+
+<style>
+
+    #main-container{
+  margin: 70px auto;
+  width: 650px;
+
+}
+
+table{
+  width: 100%;
+  background-color: rgb(0, 80, 125);
+  border-collapse: collapse;
+  text-align: left;
+
+
+}
+
+.imagen{
+  border-radius: 40px;
+}
+
+th, td {
+  padding: 20px;
+  text-align: center;
+  color: white;
+
+}
+
+thead{
+  background-color: rgb(1, 125, 221);
+  border-top: solid 25px white;
+  color: white;
+}
+
+tr:nth-child(even){
+  background-color: #ddd;
+
+}
+
+
+</style>
+    <div id="main-container">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>BASICO</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td> <a asp-controller="Conceptos" asp-action="Javascript"> <img src="~/images/Practicas/uno.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="TiposDatos"> <img src="~/images/Practicas/dos.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="Variable"> <img src="~/images/Practicas/tres.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="For"> <img src="~/images/Practicas/cuatro.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="Ifelse"> <img src="~/images/Practicas/cinco.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Home" asp-action="Examen"> <img class="imagen" src="~/images/Practicas/examen.jpg" alt="" width="40"></a> </td>
+                <td> </td>
+            </tr>
+
+
+            <thead>
+                <tr>
+                    <th>MEDIO</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td> <a asp-controller="Conceptos" asp-action="IfelseAnidados"> <img src="~/images/Practicas/uno.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="While"> <img src="~/images/Practicas/dos.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="DoWhile"> <img src="~/images/Practicas/tres.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="Funcion"> <img src="~/images/Practicas/cuatro.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="Objeto"> <img src="~/images/Practicas/cinco.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Home" asp-action="ExamenMedio"> <img class="imagen" src="~/images/Practicas/examen.jpg" alt="" width="40"></a> </td>
+                <td> </td>
+            </tr>
+
+            <thead>
+                <tr>
+                    <th>AVANZADO</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td> <a asp-controller="Conceptos" asp-action="Array"> <img src="~/images/Practicas/uno.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="Clase"> <img src="~/images/Practicas/dos.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Conceptos" asp-action="Herencia"> <img src="~/images/Practicas/tres.png" alt="" width="40"></a> </td>
+
+
+                <td> <a asp-controller="Conceptos" asp-action="Encapsulamiento"> <img src="~/images/Practicas/cuatro.png" alt="" width="40"></a> </td>
+
+                <td> <a asp-controller="Home" asp-action="ExamenAvanzado"> <img class="imagen" src="~/images/Practicas/examen.jpg" alt="" width="40"></a> </td>
+                <td> </td>
+            </tr>
+
+
+        </table>
+    </div>

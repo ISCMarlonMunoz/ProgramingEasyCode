@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "POO - Abstraccion";
+}
+<style>
+     body {
+    margin-top: 50px;
+}
+   .contenedor {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+   .divuno {
+    background: linear-gradient(-160deg, black, rgb(2,75,110));
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 150px;
+    padding-bottom: 10px;
+}
+
+   .divdos {
+    background: orange;
+    position: relative;
+    height: 180px;
+    width: 97%;
+}
+
+.divtres {
+    background: linear-gradient(-160deg, rgb(48,151,168), rgb(1,10,147) );
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 150px;
+}
+
+.codigo{
+    color:black;
+}
+
+</style>
+
+    <div class="contenedor">
+
+        <div class="divuno">
+            <div class="texto">
+                <h4 class="principal">ABSTRACCION</h4>
+                <p>Las clase abstractas son plantillas que sirven para definir otras clases establecen las estructura minima que deben llevar sus clases derivadas, sin definir a detalle su funcionabilidad. </p>
+            </div>
+        </div>
+
+        <div class="divdos">
+            <div class="texto2">
+                <table>
+
+                    <tr>
+                        <td><img class="imagen" src="~/images/variable.jpg" alt="" width="145"></td>
+
+
+                        <td>
+                            <h4>ESTRUCTURA DEL CODIGO</h4>
+                            <textarea  class="codigo" name="textarea" rows="7" cols="73">
+              var miArray = [1, 2, 3, 4];
+
+              var AlumnasArray = ["Jacqueline", "Sophia", "Autumn"];
+            </textarea>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="divtres">
+            <div class="texto3">
+                <h4>DATO IMPORTANTE</h4>
+                <ul>
+                    <li>No tienen que ser del mismo tipo.</li>
+                    <li>Ni la longitud o los tipos de los elementos del array son fijos. Dado que la longitud de un array puede cambiar en cualquier momento.</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>

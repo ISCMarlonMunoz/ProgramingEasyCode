@@ -1,0 +1,127 @@
+﻿@{
+    ViewData["Title"] = "POO - Herencia";
+}
+<style>
+     body {
+    margin-top: 50px;
+}
+   .contenedor {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+   .divuno {
+    background: linear-gradient(-160deg, black, rgb(2,75,110));
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 150px;
+    padding-bottom: 10px;
+}
+
+   .divdos {
+    background: orange;
+    position: relative;
+    height: 180px;
+    width: 97%;
+}
+
+.divtres {
+    background: linear-gradient(-160deg, rgb(48,151,168), rgb(1,10,147) );
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 150px;
+}
+
+.codigo{
+    color:black;
+}
+
+</style>
+
+    <div class="contenedor">
+
+        <div class="divuno">
+            <div class="texto">
+                <h4 class="principal">HERENCIA</h4>
+                <p>Una clase nueva se crea a partir de una clase existente. La herencia (a la que habitualmente se denomina subclase) proviene del hecho de que la subclase (la nueva clase creada) contiene las atributos y métodos de la clase primaria. La principal ventaja de la herencia es la capacidad para definir atributos y métodos nuevos para la subclase, que luego se aplican a los atributos y métodos heredados. </p>
+            </div>
+        </div>
+
+        <div class="divdos">
+            <div class="texto2">
+                <table>
+
+                    <tr>
+                        <td><img class="imagen" src="~/images/Conceptos/herencia.jpg" alt="" width="145"></td>
+
+
+                        <td>
+                            <h4>ESTRUCTURA DEL CODIGO</h4>
+                            <textarea class="codigo" name="textarea" rows="7" cols="73">
+                            CLASE DE UNA PERSONA Y SUS CARACTERISTICAS
+
+function Persona(nombrePila, apellido, edad, genero, intereses) {
+  this.nombre = {
+    nombrePila,
+    apellido
+  };
+  this.edad = edad;
+  this.genero = genero;
+  this.intereses = intereses;
+};
+
+
+Todos los métodos están definidos en el prototipo del constructor. Por ejemplo:
+
+Persona.prototype.saludo = function() {
+  alert('¡Hola! soy ' + this.nombre.nombrePila + '.');
+}
+
+Digamos que quisieramos crear una clase de Profesor,que hereda todos los miembros de Persona, pero también incluye:
+
+Una nueva propiedad, materia — esto contendrá la materia que el profesor enseña.
+Un método actualizado de saludo(), que suena un poco más formal que el método estándar de saludo() — más adecuado para un profesor que se dirige a algunos estudiantes en la escuela.
+
+
+Lo primero que tenemos que hacer es crear el constructor Profesor()  — añadimos lo siguiente tras el código existente:
+
+function Profesor(nombrePila, apellido, edad, genero, intereses, materia) {
+  Person.call(this, nombrePila, apellido, edad, genero, intereses);
+
+  this.materia = materia;
+}
+
+Queremos que el constructor Profesor() tome los mismos parámetros que el constructor Persona() del que está heredando, por lo que los especificamos todos como parámetros en la invocación call().
+
+La última línea dentro del constructor simplemente define la nueva propiedad subject que los profesores tendrán y que las personas genéricas no tienen.
+                                
+
+            </textarea>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="divtres">
+            <div class="texto3">
+                <h4>DATO IMPORTANTE</h4>
+                <ul>
+                    <li>La gran ventaja es que uno ya no debe comenzar desde cero cuando desea especializar una clase existente. </li>
+                    <li>Como resultado, se pueden adquirir bibliotecas de clases que ofrecen una base que puede especializarse a voluntad.</li>
+                    <li>
+                        Es el mecanismo mas utilizado para optimizar la codificacion ya que permite reutilizar metodos definidos en superclase, para definir nuevas subclases
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>

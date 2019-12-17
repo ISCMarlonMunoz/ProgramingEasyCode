@@ -1,0 +1,372 @@
+﻿@{
+    ViewData["Title"] = "Examen";
+}
+
+@model ProgramingEasy.Models.Calificaciones
+
+
+@using System.Security.Principal
+
+<style>
+
+    body{
+        margin-top: 40px;
+    }
+
+    #contenedor {
+        margin: 50px auto;
+        width: 750px;
+        height: 450px;
+        overflow-y: scroll;
+        background-color: rgb(1, 125, 221);
+        padding: 50px;
+        border-radius: 50px;
+    }
+
+
+    table {
+        background-color: rgb(1, 125, 221);
+        text-align: left;
+        width: 100%;
+        border-color: white;
+        color: black;
+    }
+
+    th {
+        padding: 20px;
+    }
+
+    td {
+        padding: 20px;
+        padding-left: 30px;
+        border-top: solid 2px white;
+    }
+
+    thead {
+        background-color: rgb(1, 125, 221);
+        border-bottom: solid 5px black;
+        color: white;
+        font-size: 20px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgb(1, 125, 221);
+        color: white;
+    }
+
+    /*
+    tr:hover td{
+      background-color: #0E760B;
+      color: white;
+    }
+    */
+    #resultado {
+        padding: 70px;
+    }
+    #select2, #select4, #select6, #select8, #select10{
+        color: black;
+
+    }
+</style>
+
+<div id="contenedor">
+    <table>
+        <thead>
+            <tr>
+                <th>Preguntas</th>
+                <th> Opciones</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>
+                <p>En Javascript se usan unos elementos denominados objetos, ¿Sabes que son?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Los elementos usados para comunicarse con el explorador.<br> <br>
+                    B. Elementos utilizados para almacenar valores.<br> <br>
+                    C. Un conjunto de propiedades y métodos encerrados bajo un nombre. <br> <br>
+                    D. Son igual que las variables.
+                </p>
+            </td>
+
+            <td>
+                <select id="select1">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>¿Además de variables, objetos, sentencias en Javascript se usan las llamadas funciones que son?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Una sentencia o instrucción. <br> <br>
+                    B. Una declaración para definir objetos. <br> <br>
+                    C. Un conjunto de sentencias o instrucciones agrupadas y definidas con un identificador o nombre. <br> <br>
+                    D. Un controlador de eventos.
+                </p>
+            </td>
+
+            <td>
+                <select id="select2">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>¿Cual es la funcion de un constructor?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Construir la clase. <br> <br>
+                    B. Contruir un objeto. <br> <br>
+                    C. Para inicializar la clase. <br> <br>
+                    D. Para asignar valores a los datos del objetos.
+                </p>
+            </td>
+
+            <td>
+                <select id="select3">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>¿Cual es la diferencia entre una Clase y un Objeto?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Podemos ver la clase con un modelo o plantilla y a un objeto es el instanciamiento de esa plantilla.. <br> <br>
+                    B. r2. <br> <br>
+                    C. r3. <br> <br>
+                    D. r4.
+                </p>
+            </td>
+
+            <td>
+                <select id="select4">
+                    <option value="00">Respuestas</option>
+                    <option value="10">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Que es una Clase?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. r1. <br> <br>
+                    B. r2. <br> <br>
+                    C. r3. <br> <br>
+                    D. Contienen comportamiento establecidos, en resumen una clase se extiende y una interfaz se implementa.
+                </p>
+            </td>
+
+            <td>
+                <select id="select5">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="10">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Es un bloque de instrucciones que puede reutilizarse y sirve para organizar un programa?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Función. <br> <br>
+                    B. Método. <br> <br>
+                    C. Estructura. <br> <br>
+                    D. Condicion Logica.
+                </p>
+            </td>
+
+            <td>
+                <select id="select6">
+                    <option value="00">Respuestas</option>
+                    <option value="10">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Que son las Excepciones?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. r1. <br> <br>
+                    B. Una excepcion es un evento que ocurre durante la ejecucion del programa, interrumpiendo el flujo normal. <br> <br>
+                    C. r3. <br> <br>
+                    D. r4.
+                </p>
+            </td>
+
+            <td>
+                <select id="select7">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="10">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Es la forma correcta de llamar la siguiente función?</p>
+                <p>def AreaTriangulo(Base, Altura)</p>
+            </td>
+
+            <td>
+                <p>
+                    A. AreaTriangulo(). <br> <br>
+                    B. AreaTriangulo(12,33). <br> <br>
+                    C. AreaTriangulo(12,). <br> <br>
+                    D. function AreaTriangulo.
+                </p>
+            </td>
+
+            <td>
+                <select id="select8">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="10">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Es la forma correcta de definir una función?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. def nombre(parametros): <br>
+                    B. def nombre(parametros);<br>
+                    C. def nombre[parametros]: <br>
+                    D. def nombre[parametros];
+                </p>
+            </td>
+
+            <td>
+                <select id="select9">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="10">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Es la forma de guardar el resultado de una función?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. variable <= nombre(parametros) <br>
+                    B. variable == nombre(parametros) <br>
+                    C. variable = nombre(parametros) <br>
+                    D. variable => nombre(parametros)
+                </p>
+            </td>
+
+            <td>
+                <select id="select10">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h3>CALIFICACION</h3>
+                <h2 id="result"></h2>
+            </td>
+
+            <td id="resultado" rowspan="3">
+                <form asp-action="contact">
+                    <input type="number" asp-for="calificacion" hidden="hidden" id="calificacion" />
+                    <input type="submit" onclick="test()" value="Listo!" />
+                </form>
+                @*@*<button type="button" onclick="test()">Listo!</button>*@
+            </td>
+            <td></td>
+        </tr>
+
+    </table>
+</div>
+ <script>
+    function test() {
+        var a = + document.getElementById("select1").value;
+        var b = + document.getElementById("select2").value;
+        var c = + document.getElementById("select3").value;
+        var d = + document.getElementById("select4").value;
+        var e = + document.getElementById("select5").value;
+        var f = + document.getElementById("select6").value;
+        var g = + document.getElementById("select7").value;
+        var h = + document.getElementById("select8").value;
+        var i = + document.getElementById("select9").value;
+        var j = + document.getElementById("select10").value;
+
+        document.getElementById("result").innerHTML = a + b + c + d + e + f + g + h + i + j;
+        document.getElementById("calificacion").value = a + b + c + d + e + f + g + h + i + j;
+    }
+</script>
+

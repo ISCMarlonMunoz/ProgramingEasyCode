@@ -1,0 +1,95 @@
+﻿@{
+    ViewData["Title"] = "Javascript - For";
+}
+<style>
+    body {
+    margin-top: 50px;
+}
+
+   .contenedor {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+   .divuno {
+    background: linear-gradient(-160deg, black, rgb(2,75,110));
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 150px;
+    padding-bottom: 10px;
+}
+
+   .divdos {
+    background: orange;
+    position: relative;
+    height: 180px;
+    width: 97%;
+}
+
+.divtres {
+    background: linear-gradient(-160deg, rgb(48,151,168), rgb(1,10,147) );
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 150px;
+}
+
+.codigo{
+    color:black;
+}
+
+</style>
+
+    <div class="contenedor">
+
+        <div class="divuno">
+            <div class="texto">
+                <h4 class="principal">FOR</h4>
+                <p>Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar la sentencia.</p> <br>
+                <ul>
+                    
+                    <li> <h6>EJEMPLO</h6>La siguiente sentencia for comienza mediante la declaración de la variable i y se inicializa a 0. Comprueba que i es menor que nueve, realiza las dos sentencias con éxito e incrementa i en 1 después de cada pase del bucle.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="divdos">
+            <div class="texto2">
+                <table>
+
+                    <tr>
+                        <td><img class="imagen" src="~/images/Conceptos/for.jpg" alt="" width="145"></td>
+
+
+                        <td>
+                            <h4>ESTRUCTURA DEL CODIGO</h4>
+                            <textarea class="codigo" name="textarea" rows="7" cols="73">
+              for (var i = 0; i < 9; i++) {
+                n += i;
+                miConteo(n);
+              }
+            </textarea>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="divtres">
+            <div class="texto3">
+                <h4>DATO IMPORTANTE</h4>
+                <ul>
+                    <li>Es empleada en la programación de algoritmos para repetir un código una o más veces dependiendo de un contador.</li>
+                    <li>se emplea cuando se sabe de antemano el número de iteraciones necesarias antes de entrar a las repeticiones.</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>

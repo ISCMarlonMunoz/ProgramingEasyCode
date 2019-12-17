@@ -1,0 +1,412 @@
+﻿@{
+    ViewData["Title"] = "POO - Examen Medio";
+}
+
+@model ProgramingEasy.Models.Calificaciones
+
+
+@using System.Security.Principal
+
+<style>
+
+    body {
+        margin-top: 40px;
+    }
+
+    #contenedor {
+        margin: 50px auto;
+        width: 750px;
+        height: 450px;
+        overflow-y: scroll;
+        background-color: rgb(1, 125, 221);
+        padding: 50px;
+        border-radius: 50px;
+    }
+
+
+    table {
+        background-color: rgb(1, 125, 221);
+        text-align: left;
+        width: 100%;
+        border-color: white;
+        color: black;
+    }
+
+    th {
+        padding: 20px;
+    }
+
+    td {
+        padding: 20px;
+        padding-left: 30px;
+        border-top: solid 2px white;
+    }
+
+    thead {
+        background-color: rgb(1, 125, 221);
+        border-bottom: solid 5px black;
+        color: white;
+        font-size: 20px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgb(1, 125, 221);
+        color: white;
+    }
+
+    /*
+    tr:hover td{
+      background-color: #0E760B;
+      color: white;
+    }
+    */
+    #resultado {
+        padding: 70px;
+    }
+
+    #select2, #select4, #select6, #select8, #select10 {
+        color: black;
+    }
+
+    .codigo_textarea{
+        color:black;
+    }
+</style>
+
+<div id="contenedor">
+    <table>
+        <thead>
+            <tr>
+                <th>Preguntas</th>
+                <th> Opciones</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>
+                <p>Cuando queremos almacenar una lista de valores en Javascript lo más adecuado es usar.</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Una variable cuyo nombre termine en un número o índice.<br> <br>
+                    B. Una variable cualquiera.<br> <br>
+                    C. Una constante tipo lista. <br> <br>
+                    D. Una instancia del objeto array.
+                </p>
+            </td>
+
+            <td>
+                <select id="select1">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="10">D</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>¿Si queremos que se ejecute una u otra instrucción en función del resultado de una comparación se utiliza la sentencia?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. While. <br> <br>
+                    B. If y Else . <br> <br>
+                    C. For. <br> <br>
+                    D. Do while.
+                </p>
+            </td>
+
+            <td>
+                <select id="select2">
+                    <option value="00">Respuestas</option>
+                    <option value="10">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>¿Existen unos operadores denominados operadores lógicos, que son aquellos que?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Sólo trabajan con valores lógicos (true o false). <br> <br>
+                    B. Trabajan con valores a nivel de bit. <br> <br>
+                    C. Que sólo dan resultados booleanos (true o false).. <br> <br>
+                    D. Son operadores normales.
+                </p>
+            </td>
+
+            <td>
+                <select id="select3">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>¿Qué imprime en consola el siguiente programa, si ingresas el numero 3?</p>
+<textarea name="textarea" rows="10" cols="28" class="codigo_textarea">
+  numeroInt = input(""Ingresa un Numero: "")
+
+  numeroStr = int(numeroInt)
+  if(numeroInt > 2):
+       print(numeroStr + ""1"")
+  elif(numeroInt == 2):
+       print(numeroStr + ""2"")
+  else:
+       print(numeroStr + ""3"")</textarea>
+            </td>
+
+            <td>
+                <p>
+                    A. 34. <br> <br>
+                    B. 31. <br> <br>
+                    C. 33. <br> <br>
+                    D. 32.
+                </p>
+            </td>
+
+            <td>
+                <select id="select4">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Para hacer que una o varias instrucciones se ejecuten repetidamente mientras que se cumpla una cierta condición se utiliza una sentencia?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Switch y Case <br> <br>
+                    B. Break. <br> <br>
+                    C. While. <br> <br>
+                    D. If y Else.
+                </p>
+            </td>
+
+            <td>
+                <select id="select5">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Cuál es la salida en consola del siguiente programa?</p>
+<textarea name="textarea" rows="5" cols="28" class="codigo_textarea">
+cadena= ""
+  for j in range(0,10):
+       cadena = cadena + str(j+1)
+  print(cadena)</textarea>
+            </td>
+
+            <td>
+                <p>
+                    A. 123456789. <br> <br>
+                    B. 1,2,3,4,5,6,7,8,9,10. <br> <br>
+                    C. 12345678910. <br> <br>
+                    D. 01234567891011.
+                </p>
+            </td>
+
+            <td>
+                <select id="select6">
+                    <option value="00">Respuestas</option>
+                    <option value="10">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Si nuestro programa está ejecutando un bucle es posible hacer que se salte parte de las instrucciones que forman el cuerpo del bucle y vuelva al principio del mismo, para ello usamos la instrucción de control?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Switch. <br> <br>
+                    B. Continue. <br> <br>
+                    C. Goto. <br> <br>
+                    D. Skip.
+                </p>
+            </td>
+
+            <td>
+                <select id="select7">
+                    <option value="00">Respuestas</option>
+                    <option value="10">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Una instrucción o sentencia de control es una instrucción que?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Acelera la ejecución de los programas. <br> <br>
+                    B. Controlan la ejecución del programa deteniéndolo si hay un error. <br> <br>
+                    C. Hace que las instrucciones se ejecuten secuencialmente. <br> <br>
+                    D. Hace que los programas no se ejecuten de forma secuencial.
+                </p>
+            </td>
+
+            <td>
+                <select id="select8">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="10">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Es una estructura de repetición que se le puede indicar el número de veces que se puede repetir un bloque de instrucciones?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. For <br> <br>
+                    B. Foreach <br> <br>
+                    C. While <br> <br>
+                    D. If y Else
+                </p>
+            </td>
+
+            <td>
+                <select id="select9">
+                    <option value="00">Respuestas</option>
+                    <option value="10">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿En el siguiente código una decisión secundaria es?</p>
+<textarea name="textarea" rows="15" cols="28" class="codigo_textarea">
+  edad = input("Ingresa tu edad: ")
+
+genero = input("Genero (M/F): ")
+
+if(int(edad) >= 18):
+     if(genero == "M" or genero == "m"):
+          print("ID: " + "MA" + edad + "+")
+     else:
+          print("ID: " + "FE" + edad + "+")
+else:
+     if(genero == "F" or genero == "f"):
+          print("ID: " + "Fe" + edad + "-")
+     else:
+     print("ID: " + "Ma" + edad + "-")
+if(int(edad) >= 18):
+genero = input("Genero (M/F): ")
+
+if(genero == "F" or genero == "f");</textarea>
+            </td>
+
+            <td>
+                <p>
+                    A. Else print("ID: " + "FE" + edad + "+")<br> <br>
+                    B. if(genero == "F" or genero == "f"):
+                    print("ID: " + "Fe" + edad + "-")<br> <br>
+                    C. if(genero == "F" or genero == "f"); <br> <br>
+                    D. else:
+                    if(genero == "F" or genero == "f"):
+                    print("ID: " + "Fe" + edad + "-")
+                </p>
+            </td>
+
+            <td>
+                <select id="select10">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="10">D</option>
+                </select>
+            </td>
+        </tr>
+
+<tr>
+    <td>
+        <h3>CALIFICACION</h3>
+        <h2 id="result"></h2>
+    </td>
+
+    <td id="resultado" rowspan="3">
+        <form asp-action="contact">
+            <input type="number" asp-for="calificacion" hidden="hidden" id="calificacion" />
+            <input type="submit" onclick="test()" value="Listo!" />
+        </form>
+        @*@*<button type="button" onclick="test()">Listo!</button>*@
+    </td>
+    <td></td>
+</tr>
+
+    </table>
+</div>
+<script>
+    function test() {
+        var a = + document.getElementById("select1").value;
+        var b = + document.getElementById("select2").value;
+        var c = + document.getElementById("select3").value;
+        var d = + document.getElementById("select4").value;
+        var e = + document.getElementById("select5").value;
+        var f = + document.getElementById("select6").value;
+        var g = + document.getElementById("select7").value;
+        var h = + document.getElementById("select8").value;
+        var i = + document.getElementById("select9").value;
+        var j = + document.getElementById("select10").value;
+
+        document.getElementById("result").innerHTML = a + b + c + d + e + f + g + h + i + j;
+        document.getElementById("calificacion").value = a + b + c + d + e + f + g + h + i + j;
+    }
+</script>
+

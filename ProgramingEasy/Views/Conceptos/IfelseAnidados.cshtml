@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Javascript - If - Else (Anidados)";
+}
+<style>
+     body {
+    margin-top: 50px;
+}
+   .contenedor {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+   .divuno {
+    background: linear-gradient(-160deg, black, rgb(2,75,110));
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 150px;
+    padding-bottom: 10px;
+}
+
+   .divdos {
+    background: orange;
+    position: relative;
+    height: 180px;
+    width: 97%;
+}
+
+.divtres {
+    background: linear-gradient(-160deg, rgb(48,151,168), rgb(1,10,147) );
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 150px;
+}
+
+.codigo{
+    color:black;
+}
+
+</style>
+
+    <div class="contenedor">
+
+        <div class="divuno">
+            <div class="texto">
+                <h4 class="principal">IF - ELSE (ANIDADOS)</h4>
+                <p>Multiples sentencias if - else pueden ser anidadas para crear una cláusula else if de condiciones.</p>
+            </div>
+        </div>
+
+        <div class="divdos">
+            <div class="texto2">
+                <table>
+
+                    <tr>
+                        <td><img class="imagen" src="~/images/Conceptos/ifelseanidados.jpg" alt="" width="145"></td>
+
+
+                        <td>
+                            <h4>ESTRUCTURA DEL CODIGO</h4>
+                            <textarea class="codigo" name="textarea" rows="7" cols="73">
+              if (condición1) {
+
+                sentencia1
+                } else {
+
+                 if (condición2)
+
+                sentencia2
+
+                } else {
+
+                if (condición3)
+                }
+            </textarea>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="divtres">
+            <div class="texto3">
+                <h4>DATO IMPORTANTE</h4>
+                <ul>
+                    <li>Con esta estructura logramos condiciones complejas de ser necesario.</li>
+                    <li>El anidamiento es la práctica de incorporar llamadas a funciones o procedimientos, unas dentro de otras, mediante la inclusión de diversos niveles de llaves.</li>
+                </ul>
+            </div>
+        </div>
+    </div>

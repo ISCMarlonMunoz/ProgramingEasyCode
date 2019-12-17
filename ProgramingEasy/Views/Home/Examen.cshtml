@@ -1,0 +1,374 @@
+﻿@{
+    ViewData["Title"] = "POO - Examen Avanzado";
+}
+
+@model ProgramingEasy.Models.Calificaciones
+
+
+@using System.Security.Principal
+
+<style>
+
+    body{
+        margin-top: 40px;
+    }
+
+    #contenedor {
+        margin: 50px auto;
+        width: 750px;
+        height: 450px;
+        overflow-y: scroll;
+        background-color: rgb(1, 125, 221);
+        padding: 50px;
+        border-radius: 50px;
+    }
+
+
+    table {
+        background-color: rgb(1, 125, 221);
+        text-align: left;
+        width: 100%;
+        border-color: white;
+        color: black;
+    }
+
+    th {
+        padding: 20px;
+    }
+
+    td {
+        padding: 20px;
+        padding-left: 30px;
+        border-top: solid 2px white;
+    }
+
+    thead {
+        background-color: rgb(1, 125, 221);
+        border-bottom: solid 5px black;
+        color: white;
+        font-size: 20px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgb(1, 125, 221);
+        color: white;
+    }
+
+    /*
+    tr:hover td{
+      background-color: #0E760B;
+      color: white;
+    }
+    */
+    #resultado {
+        padding: 70px;
+    }
+    #select2, #select4, #select6, #select8, #select10{
+        color: black;
+
+    }
+
+
+</style>
+
+<div id="contenedor">
+    <table>
+        <thead>
+            <tr>
+                <th>Preguntas</th>
+                <th> Opciones</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>
+                <p>Javascript puede definirse como</p>
+            </td>
+
+                <td>
+                    <p>
+                        A. Un lenguaje de programación.<br> <br>
+                        B. Un pseudónimo del lenguaje de programación como Java.<br> <br>
+                        C. Un programa para mostrar páginas web. <br> <br>
+                        D. Un pseudo lenguaje de programación usado para construir páginas web.
+                    </p>
+                </td>
+
+
+            <td>
+                <select id="select1">
+                    <option value="00">Respuestas</option>
+                    <option value="10">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>¿Los llamados scripts o guiones de las páginas web son?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Son tipos de controles ActiveX. <br> <br>
+                    B. Cualquier programa ejecutado a partir de una página web. <br> <br>
+                    C. Son programas CGI ejecutados en el servidor. <br> <br>
+                    D. Programas creados con Javascritp o VBscript que se ejecutan en las páginas web.
+                </p>
+            </td>
+
+            <td>
+                <select id="select2">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="10">D</option>
+                </select>
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>¿En Javascript, como en cualquier lenguaje de programación, se utilizan variables, pero ¿sabes que son las variables?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Los nombres de los eventos. <br> <br>
+                    B. Los nombres de las funciones. <br> <br>
+                    C. Elementos que cambian adaptándose al entorno. <br> <br>
+                    D. Los elementos usados para almacenar valores.
+                </p>
+            </td>
+
+            <td>
+                <select id="select3">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="10">D</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>Para identificar una variable, objeto o función en Javascript se pueden usar mayúsculas o minúsculas siempre que tengamos en cuenta que...</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Javascript no distingue entre mayúsculas y minúsculas. <br> <br>
+                    B. Sólo pueden usarse mayúsculas. <br> <br>
+                    C. Javascript diferencia entre mayúsculas y minúsculas. <br> <br>
+                    D. Sólo pueden usarse minúsculas.
+                </p>
+            </td>
+
+            <td>
+                <select id="select4">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿En Javascript se utilizan operadores?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Relacionar dos o más valores produciendo un resultado. <br> <br>
+                    B. Realizar operaciones matemáticas entre variables numéricas. <br> <br>
+                    C. Es el nombre que se da a los métodos definidos dentro de los objetos. <br> <br>
+                    D. Obtener una ecuacion.
+                </p>
+            </td>
+
+            <td>
+                <select id="select5">
+                    <option value="00">Respuestas</option>
+                    <option value="10">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Los programas escritos en Javascript se ejecutan?</p>
+            </td>
+
+            <td>
+                <p>
+                    A.En la red. <br> <br>
+                    B. En la máquina del cliente o visitante a la página web. <br> <br>
+                    C. En el servidor donde se encuentran almacenadas las páginas web. <br> <br>
+                    D. Depende del caso.
+                </p>
+            </td>
+
+            <td>
+                <select id="select6">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="10">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Los lenguajes Javascript y Java son lenguajes de programación que tienen en común?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Ambos son lenguajes de programación orientada a objetos. <br> <br>
+                    B. No tienen nada en común. <br> <br>
+                    C. Que ambos usan objetos. <br> <br>
+                    D. Son lenguajes idénticos.
+                </p>
+            </td>
+
+            <td>
+                <select id="select7">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Cuando colocamos una función javascript dentro de la página web, la función se coloca...?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Puede colocarse en la sección HEAD o en la sección BODY. <br> <br>
+                    B. Debe colocarse en la sección BODY de la página. <br> <br>
+                    C. En la sección HEAD forzosamente. <br> <br>
+                    D. Las funciones Javascript no pueden colocarse dentro de la página.
+                </p>
+            </td>
+
+            <td>
+                <select id="select8">
+                    <option value="00">Respuestas</option>
+                    <option value="10">A</option>
+                    <option value="0">B</option>
+                    <option value="0">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Cuales son los tipos de datos JavaScript?</p>
+            </td>
+
+            <td>
+                <p>
+                    A.HOLA 1 <br> <br>
+                    B. HOLA 2 <br> <br>
+                    C. String, booleano, Objeto, Número, Indefinido. <br> <br>
+                    D. HOLA 4
+                </p>
+            </td>
+
+            <td>
+                <select id="select9">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Muchas veces habrás leído que determinados identificadores son palabras clave o reservadas del lenguaje, esto significa que?</p>
+            </td>
+
+            <td>
+                <p>
+                    A. Sólo pueden usarse para identificar funciones. <br> <br>
+                    B. Sólo pueden usarse para identificar objetos. <br> <br>
+                    C. Son palabras reservadas para uso futuro. <br> <br>
+                    D. Son palabras para identificar elementos del propio lenguaje.
+                </p>
+            </td>
+
+            <td>
+                <select id="select10">
+                    <option value="00">Respuestas</option>
+                    <option value="0">A</option>
+                    <option value="0">B</option>
+                    <option value="10">C</option>
+                    <option value="0">D</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h3>CALIFICACION</h3>
+                <h2 id="result"></h2>
+            </td>
+
+            <td id="resultado" rowspan="3">
+                <form asp-action="Examen">
+                    <input type="number" asp-for="calificacion" hidden="hidden" id="calificacion" />
+                    <input class="boton" type="submit" onclick="test()" value="Listo!" />
+                </form>
+                @*@*<button type="button" onclick="test()">Listo!</button>*@
+            </td>
+            <td></td>
+        </tr>
+
+    </table>
+</div>
+ <script>
+    function test() {
+        var a = + document.getElementById("select1").value;
+        var b = + document.getElementById("select2").value;
+        var c = + document.getElementById("select3").value;
+        var d = + document.getElementById("select4").value;
+        var e = + document.getElementById("select5").value;
+        var f = + document.getElementById("select6").value;
+        var g = + document.getElementById("select7").value;
+        var h = + document.getElementById("select8").value;
+        var i = + document.getElementById("select9").value;
+        var j = + document.getElementById("select10").value;
+
+        document.getElementById("result").innerHTML = a + b + c + d + e + f + g + h + i + j;
+        document.getElementById("calificacion").value = a + b + c + d + e + f + g + h + i + j;
+    }
+</script>
+

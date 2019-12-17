@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "POO - Clase";
+}
+<style>
+     body {
+    margin-top: 50px;
+}
+   .contenedor {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+   .divuno {
+    background: linear-gradient(-160deg, black, rgb(2,75,110));
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 150px;
+    padding-bottom: 10px;
+}
+
+   .divdos {
+    background: orange;
+    position: relative;
+    height: 180px;
+    width: 97%;
+}
+
+.divtres {
+    background: linear-gradient(-160deg, rgb(48,151,168), rgb(1,10,147) );
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 150px;
+}
+
+.codigo{
+    color:black;
+}
+
+</style>
+
+    <div class="contenedor">
+
+        <div class="divuno">
+            <div class="texto">
+                <h4 class="principal">DECLARACION DE CLASE</h4>
+                <p>Para comenzar a utilizar un objeto pirmero debes crear la plantilla de su clase, a este proceso se le llama "declaracion de clases" que es similiar ala declaracion de funciones que hemos visto. </p>
+                <ul>
+                    <li>
+                        ATRIBUTOS O PROPIEDADES: Los atributos se declaran dentro un metodo especial que se ejecuta automaticamente ala crear un objeto, a este metodo se le llama constructor.
+                    </li>
+
+                    <li>
+                        METODO o FUNCION: Son funciones declaradas dentro de una clase que sirven para interactuar con ella.
+                    </li>
+                </ul>
+            
+            </div>
+        </div>
+
+        <div class="divdos">
+            <div class="texto2">
+                <table>
+
+                    <tr>
+                        <td><img class="imagen" src="~/images/Conceptos/Clase.jpg" alt="" width="145"></td>
+
+
+                        <td>
+                            <h4>ESTRUCTURA DEL CODIGO</h4>
+                            <textarea class="codigo" name="textarea" rows="7" cols="73">
+              class Rectangle {
+                constructor(height, width) {
+                this.height = height;
+                this.width = width;
+                }
+            }
+            </textarea>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="divtres">
+            <div class="texto3">
+                <h4>DATO IMPORTANTE</h4>
+                <ul>
+                    <li>estas brindan una mejora de sintaxis en la creación de objetos y herencia basada en POO</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>

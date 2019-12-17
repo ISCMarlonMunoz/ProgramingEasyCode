@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "POO - Objeto";
+}
+<style>
+     body {
+    margin-top: 50px;
+}
+   .contenedor {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+   .divuno {
+    background: linear-gradient(-160deg, black, rgb(2,75,110));
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 150px;
+    padding-bottom: 20px;
+}
+
+   .divdos {
+    background: orange;
+    position: relative;
+    height: 180px;
+    width: 97%;
+}
+
+.divtres {
+    background: linear-gradient(-160deg, rgb(48,151,168), rgb(1,10,147) );
+    position: relative;
+    height: 230px;
+    width: 100%;
+    border-radius: 150px;
+}
+
+.codigo{
+    color:black;
+}
+
+</style>
+
+    <div class="contenedor">
+
+        <div class="divuno">
+            <div class="texto">
+                <h4 class="principal">OBJETO</h4>
+                <p>Es la representacion informatica de un objeto fisico o imaginario puede ser simple o complejo dependiendo de la dimension de sus tres propiedades, estado, comportamiento e identidad. </p>
+                <ul>
+                    <li>ESTADO: Esta definido por un conjunto de datos llamados atributos que almacenan las cararteristicas del objeto en determinado momento. <br /></li>
+                    <li>COMPORTAMIENTO: Esta definido por sus metodos, estos son funciones que permiten su interaccion con el programa y otros objetos.<br /></li>
+                    <li>IDENTIDAD: El objeto se define por medio del identificador con que se declara.<br /></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="divdos">
+            <div class="texto2">
+                <table>
+
+                    <tr>
+                        <td><img class="imagen" src="~/images/Conceptos/objeto.jpg" alt="" width="145"></td>
+
+
+                        <td>
+                            <h4>ESTRUCTURA DEL CODIGO</h4>
+                            <textarea class="codigo" name="textarea" rows="7" cols="73">
+              var miAuto = new Object();
+
+                miAuto.marca = "Ford";
+                miAuto.modelo = "Mustang";
+                miAuto.año = 1969;
+            </textarea>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="divtres">
+            <div class="texto3">
+                <h4>DATO IMPORTANTE</h4>
+                <ul>
+                    <li>Es una estructura de datos que contiene datos e instrucciones para trabajar con los datos.  Algunas veces los Objetos se refieren a cosas del mundo real, por ejemplo, un objeto de un coche o mapa en un juego de carreras.</li>
+                    <li>Existen propiedades que extiende la funciones de un objeto, estas permiten al programador crear sistemas mas grandes y mejor estructurados aprovechando la reutilizacion del codigo. Todas las estas propiedades se definen atraves de plantillas llamadas clases.</li>
+                    <li>En la programación orientada a objetos, cada objeto es capaz de recibir mensajes, procesar datos y enviar mensajes a otros objetos. Cada objeto puede verse como una pequeña máquina independiente con un papel o responsabilidad definida.</li>
+                </ul>
+            </div>
+        </div>
+    </div>

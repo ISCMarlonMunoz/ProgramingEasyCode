@@ -1,0 +1,58 @@
+@font-face {
+  src: url(font/medium.ttf);
+  font-family: poppin;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppin;
+}
+
+.principal {
+    
+}
+
+
+.divdos::before {
+    content: '';
+    position: absolute;
+    border-bottom: 50px solid orange;
+    border-left: 66.7vw solid transparent;
+    /*border-left: 70.7vw solid transparent;*/
+    top: -50px;
+}
+
+.divdos::after {
+    content: '';
+    position: absolute;
+    border-top: 90px solid orange;
+    border-left: 66.7vw solid transparent;
+    /*border-left: 70.7vw solid transparent;*/
+    bottom: -90px;
+    z-index: 1;
+}
+
+.imagen {
+    border-radius: 100px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.texto {
+    padding: 3%;
+    padding-left: 50px;
+    color: white;
+}
+
+.texto2 {
+    padding: 2%;
+    color: white;
+}
+
+.texto3 {
+    padding: 6%;
+    color: white;
+}
+
+
